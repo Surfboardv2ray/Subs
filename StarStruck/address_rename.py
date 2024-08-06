@@ -70,7 +70,7 @@ def process_proxies(input_file, output_file, new_address, new_sni, new_host):
 # Example usage
 input_file = 'StarStruck/Star'
 output_file = 'StarStruck/StarRenamed'
-new_address = '103.184.45.31'
+new_address = '13.226.2.37'
 new_sni = 'inone-tudyof23-consecuti-epat-entswit-cd142weres-yidue-mai-tain.autoimmune6.WORkeRS.deV'
 new_host = 'inone-tudyof23-consecuti-epat-entswit-cd142weres-yidue-mai-tain.autoimmune6.WORkeRS.deV'
 
