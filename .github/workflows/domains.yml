@@ -1,7 +1,9 @@
 name: Extract Domains
 
 on:
-#  push:
+  push:
+    paths:
+      - ".github/workflows/domains.yml"
 #    branches:
 #      - main
 #  pull_request:
@@ -40,4 +42,5 @@ jobs:
           git add Domains/output.txt
           timestamp=$(TZ='Asia/Tehran' date)
           git commit -m "✅Updated on ${timestamp}"
+          git pull
           git push
