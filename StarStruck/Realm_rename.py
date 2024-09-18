@@ -58,6 +58,6 @@ def process_proxies(input_file, output_file, new_address):
 # Example usage
 input_file = 'StarStruck/RealmInput'
 output_file = 'Realm'
-new_address = 'mosmeri.com'
+new_address = '162.159.192.175'
 
 process_proxies(input_file, output_file, new_address)
