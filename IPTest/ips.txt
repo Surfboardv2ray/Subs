@@ -17,3 +17,4 @@ didgahnews.ir
 198.41.215.252
 104.25.174.85
 cdn.dizzland.com
+173.245.49.8
