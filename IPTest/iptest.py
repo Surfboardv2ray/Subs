@@ -66,9 +66,9 @@ def process_proxies(input_file, ips_file, output_file):
     with open(input_file, 'r') as f:
         proxy = f.readline().strip()
 
-    # Read the list of IP addresses
+    # Read the list of IP addresses, skipping lines that start with "//"
     with open(ips_file, 'r') as ip_f:
-        ips = [line.strip() for line in ip_f.readlines()]
+        ips = [line.strip() for line in ip_f.readlines() if not line.strip().startswith("//")]
 
     # Process each IP address and create a new configuration
     with open(output_file, 'w') as out_f:
