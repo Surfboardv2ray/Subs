@@ -12,12 +12,6 @@
 85.133.202.190
 85.133.195.58
 85.133.195.58
-// Domains
-dev95.ir
-118nahal.ir
-time.is
-didgahnews.ir
-cdn.dizzland.com
 // Warp
 188.114.99.112
 162.159.192.105
@@ -31,3 +25,9 @@ cdn.dizzland.com
 198.41.215.252
 104.25.174.85
 // CDN
+// Domains
+dev95.ir
+118nahal.ir
+time.is
+didgahnews.ir
+cdn.dizzland.com
