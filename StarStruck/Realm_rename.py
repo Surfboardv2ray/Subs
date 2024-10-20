@@ -43,6 +43,23 @@ def rename_vless_address(proxy, new_address):
         print("Error processing vless proxy: ", e)
         return None
 
+def rename_trojan_address(proxy, new_address):
+    global proxy_counter
+    try:
+        parts = proxy.split('@')
+        userinfo = parts[0]
+        hostinfo = parts[1]
+        hostinfo_parts = hostinfo.split(':')
+        hostinfo_parts[0] = new_address
+        hostinfo = ':'.join(hostinfo_parts)
+        renamed_proxy = userinfo + '@' + hostinfo
+        proxy_counter += 1
+        print("Renamed Trojan proxy:", renamed_proxy)  # Debugging
+        return renamed_proxy
+    except Exception as e:
+        print("Error processing trojan proxy: ", e)
+        return None
+
 def process_proxies(input_file, output_file, new_address):
     with open(input_file, 'r') as f, open(output_file, 'w') as out_f:
         proxies = f.readlines()
@@ -52,6 +69,10 @@ def process_proxies(input_file, output_file, new_address):
                 renamed_proxy = rename_vmess_address(proxy, new_address)
             elif proxy.startswith('vless://'):
                 renamed_proxy = rename_vless_address(proxy, new_address)
+            elif proxy.startswith('trojan://'):
+                renamed_proxy = rename_trojan_address(proxy, new_address)
+            else:
+                renamed_proxy = None
             if renamed_proxy is not None:
                 out_f.write(renamed_proxy + '\n')
 
