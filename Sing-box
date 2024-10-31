@@ -78,7 +78,7 @@
                 "Best-Ping",
                 "altho-ghitisim-ortan-oreco-niseth-tsomeoft-hesepfsdad-wcre.pages.dev",
                 "162.159.19.167",
-                "13.226.2.37",
+                "92.243.74.86",
                 "188.114.97.227",
                 "13.32.208.91",
                 "[2606:4700:310c::ac42:2f96]",
@@ -91,7 +91,7 @@
             "outbounds": [
                 "altho-ghitisim-ortan-oreco-niseth-tsomeoft-hesepfsdad-wcre.pages.dev",
                 "162.159.19.167",
-                "13.226.2.37",
+                "92.243.74.86",
                 "188.114.97.227",
                 "13.32.208.91",
                 "[2606:4700:310c::ac42:2f96]",
@@ -175,7 +175,7 @@
         },
         {
             "type": "vless",
-            "server": "13.226.2.37",
+            "server": "92.243.74.86",
             "server_port": 443,
             "uuid": "d6c761bd-f13c-4d95-9d5b-6af358079e75",
             "domain_strategy": "prefer_ipv6",
@@ -201,7 +201,7 @@
                 "path": "/tWEgIdaxENYovnsm",
                 "type": "ws"
             },
-            "tag": "13.226.2.37"
+            "tag": "92.243.74.86"
         },
         {
             "type": "vless",
