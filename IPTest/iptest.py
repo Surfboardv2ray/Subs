@@ -12,12 +12,14 @@ def rename_vmess_address(proxy, new_address):
         base64_str += '=' * (4 - missing_padding)
     try:
         decoded_str = base64.b64decode(base64_str).decode('utf-8')
+        print("Decoded VMess proxy JSON:", decoded_str)  # Debugging
         proxy_json = json.loads(decoded_str)
         proxy_json['add'] = new_address
         proxy_json['ps'] = new_address  # Set remarks to new address
         proxy_counter += 1
         encoded_str = base64.b64encode(json.dumps(proxy_json).encode('utf-8')).decode('utf-8')
         renamed_proxy = 'vmess://' + encoded_str
+        print("Renamed VMess proxy:", renamed_proxy)  # Debugging
         return renamed_proxy
     except Exception as e:
         print("Error processing VMess proxy: ", e)
@@ -35,6 +37,7 @@ def rename_vless_address(proxy, new_address):
         remarks = new_address  # Set remarks to new address
         renamed_proxy = userinfo + '@' + hostinfo + '#' + remarks
         proxy_counter += 1
+        print("Renamed VLess proxy:", renamed_proxy)  # Debugging
         return renamed_proxy
     except Exception as e:
         print("Error processing VLess proxy: ", e)
@@ -52,6 +55,7 @@ def rename_trojan_address(proxy, new_address):
         remarks = new_address  # Set remarks to new address
         renamed_proxy = userinfo + '@' + hostinfo + '#' + remarks
         proxy_counter += 1
+        print("Renamed Trojan proxy:", renamed_proxy)  # Debugging
         return renamed_proxy
     except Exception as e:
         print("Error processing Trojan proxy: ", e)
