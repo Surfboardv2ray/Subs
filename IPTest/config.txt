@@ -1,2 +1,1 @@
-trojan://WOeXShhJpL@1.1.1.1:443?security=tls&sni=kras.singersnode.workers.dev&alpn=http%2F1.1&fp=chrome&allowInsecure=1&type=ws&host=kras.singersnode.workers.dev&path=%2F10jzus.zdzdzd.xyz%2Fjuzigongyi#%F0%9F%87%BA%F0%9F%87%B8OVH%2B%40Surfboardv2ray
 trojan://cb1f26aa437d4bfa9b841d28503ce8cc@1.1.1.1:443?security=tls&sni=kras.singersnode.workers.dev&alpn=http%2F1.1&fp=chrome&allowInsecure=1&type=ws&host=kras.singersnode.workers.dev&path=%2Fjobscareertoday.com%2F6b777a91#%F0%9F%87%BA%F0%9F%87%B8GTHost%2B2%2B%40Surfboardv2ray
