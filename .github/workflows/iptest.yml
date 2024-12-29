@@ -3,7 +3,8 @@ on:
   push:
     paths:
       - ".github/workflows/iptest.yml"
-      - ""
+      - "IPTest/ips.txt"
+      - "IPTest/config.txt"
   workflow_dispatch:
 jobs:
   build:
