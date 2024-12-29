@@ -1,7 +1,9 @@
 name: IPTest
 on:
   push:
-    branches: [ main ]
+    paths:
+      - ".github/workflows/iptest.yml"
+      - ""
   workflow_dispatch:
 jobs:
   build:
