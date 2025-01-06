@@ -1,1 +1,2 @@
 vless://ac00d98b-a311-4ef2-b3a3-89f9f930b3aa@No-Go:443?encryption=none&security=tls&sni=extension.xp21.workers.dev&alpn=h3%2Ch2%2Chttp%2F1.1&fp=chrome&allowInsecure=1&type=ws&host=extension.xp21.workers.dev&path=%2FmHsa5sRv2.FArVAHARfOrevEr.cOm%2FFdNQQ9YwZaJCzXHFXJO9ry6uLKVQz#Bare
+vless://9221b170-e8a3-4abf-a303-224b31558ec3@Oracle:443?encryption=none&security=tls&sni=extension.xp21.workers.dev&alpn=http%2F1.1&fp=chrome&allowInsecure=1&type=ws&host=extension.xp21.workers.dev&path=%2Fcc2.kosnanatfilterchi.eu.org#Node-cc2.kosnanatfilterchi.eu.org
