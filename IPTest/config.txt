@@ -1,1 +1,2 @@
 vless://9221b170-e8a3-4abf-a303-224b31558ec3@Oracle:443?encryption=none&security=tls&sni=extension.xp21.workers.dev&alpn=http%2F1.1&fp=chrome&allowInsecure=1&type=ws&host=extension.xp21.workers.dev&path=%2Fcc2.kosnanatfilterchi.eu.org#Node-cc2.kosnanatfilterchi.eu.org
+trojan://bd958140-d5c9-11ef-947f-1239d0255272@unchained:443?security=tls&sni=f2b02e8a-diabetes-betablockers.renal.workers.dev&alpn=h3%2Ch2%2Chttp%2F1.1&fp=chrome&allowInsecure=1&type=ws&host=f2b02e8a-diabetes-betablockers.renal.workers.dev&path=%2Fsg4.6n6.net%2Fhowdy#S
