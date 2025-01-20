@@ -16,4 +16,3 @@ time.is
 didgahnews.ir
 cdn.dizzland.com
 // Not Tested
-// Not Working
