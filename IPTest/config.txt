@@ -1,1 +1,2 @@
 vless://9221b170-e8a3-4abf-a303-224b31558ec3@1.1.1.1:443?encryption=none&security=tls&sni=extension.xp21.workers.dev&alpn=h3%2Ch2%2Chttp%2F1.1&fp=chrome&allowInsecure=1&type=ws&host=extension.xp21.workers.dev&path=%2Fcc2.kosnanatfilterchi.eu.org#Node-cc2.kosnanatfilterchi.eu.org
+vless://02be5968-d5c1-41f9-9515-3ea043b7aac3@1.1.1.1:443?encryption=none&security=tls&sni=extension.xp21.workers.dev&alpn=h3%2Ch2%2Chttp%2F1.1&fp=chrome&allowInsecure=1&type=ws&host=extension.xp21.workers.dev&path=%2Fserver19.aibox.tv%2Fws%2F#%E6%9C%AA%E7%9F%A5_0120201445%23Node-server19.aibox.tv
