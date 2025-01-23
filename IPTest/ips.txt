@@ -1,4 +1,4 @@
-// IR
+// I
 2.189.59.7
 193.151.158.215
 89.47.200.147
@@ -11,8 +11,7 @@
 162.251.82.147
 // Domains
 dev95.ir
-118nahal.ir
-time.is
-didgahnews.ir
-cdn.dizzland.com
-// Not Tested
+// 118nahal.ir
+// time.is
+// didgahnews.ir
+// cdn.dizzland.com
