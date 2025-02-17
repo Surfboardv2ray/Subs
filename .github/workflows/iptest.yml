@@ -5,6 +5,7 @@ on:
       - ".github/workflows/iptest.yml"
       - "IPTest/ips.txt"
       - "IPTest/config.txt"
+      - "IPTest/extra.txt"
   workflow_dispatch:
 jobs:
   build:
