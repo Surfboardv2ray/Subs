@@ -90,3 +90,14 @@ ips_file = 'IPTest/ips.txt'
 output_file = 'IPTest/output'
 
 process_proxies(input_file, ips_file, output_file)
+
+# Append extra configurations from extra.txt to the output file
+extra_file = 'IPTest/extra.txt'
+try:
+    with open(extra_file, 'r') as extra_f:
+        extra_configs = [line for line in extra_f.readlines() if line.strip()]
+    with open(output_file, 'a') as out_f:
+        for config in extra_configs:
+            out_f.write(config.rstrip('\n') + '\n')
+except Exception as e:
+    print("Error appending extra configurations: ", e)
