@@ -1,1 +1,1 @@
-vless://4f17e173-4af9-5041-9662-f6c27e0decfd@1.1.1.1:443?encryption=none&security=tls&sni=acropatchy.autoimmune6.workers.dev&alpn=h3%2Ch2%2Chttp%2F1.1&fp=chrome&allowInsecure=1&type=ws&host=acropatchy.autoimmune6.workers.dev&path=%2Fusx-1.openv2ray.com%2Fopentunnel%3Fuser%3Dopentunnel.net-nothindaw#pitch
+vless://639df6e4-3bfb-4a9a-baad-656af558e923@1.1.1.1:443?encryption=none&security=tls&sni=updown.microvascular.workers.dev&alpn=h3%2Ch2%2Chttp%2F1.1&fp=chrome&allowInsecure=1&type=ws&host=updown.microvascular.workers.dev&path=%2Fse.vless.site%2Fvless#Limit
