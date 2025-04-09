@@ -1,1 +1,1 @@
-vless://639df6e4-3bfb-4a9a-baad-656af558e923@1.1.1.1:443?encryption=none&security=tls&sni=dorso.microvascular.workers.dev&alpn=h3%2Ch2%2Chttp%2F1.1&fp=chrome&allowInsecure=1&type=ws&host=dorso.microvascular.workers.dev&path=%2Fse.vless.site%2Fvless#Limit
+vless://aa6bea90-f4a5-4aea-b345-192e62bd172a@sparkchain.ai:443?encryption=none&security=tls&sni=iris-shape.cushingreflex3.workers.dev&alpn=h3%2Ch2%2Chttp%2F1.1&fp=randomized&type=ws&host=iris-shape.cushingreflex3.workers.dev&path=%2F%3Fed%3D2560#Edge%E2%98%98%EF%B8%8F
