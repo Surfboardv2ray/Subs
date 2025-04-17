@@ -1,1 +1,1 @@
-vless://79b9ba15-de8d-4b43-9e35-f763f483ce90@1.1.1.1:443?encryption=none&security=tls&sni=refiner-tls.autoimmune4.workers.dev&alpn=h3%2Ch2%2Chttp%2F1.1&fp=chrome&allowInsecure=1&type=ws&host=refiner-tls.autoimmune4.workers.dev&path=%2Fde2-full.privateip.net%2Fws#4-14-TLS
+vless://90f3074f-252f-4205-8e56-d39a5589d902@1.1.1.1:443?encryption=none&security=tls&sni=midodrine.pages.dev&alpn=h3%2Ch2%2Chttp%2F1.1&fp=chrome&allowInsecure=1&type=ws&host=midodrine.pages.dev&path=%2Fus2-full.privateip.net%2Fws#source
