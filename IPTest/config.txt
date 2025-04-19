@@ -1,1 +1,1 @@
-vless://90f3074f-252f-4205-8e56-d39a5589d902@1.1.1.1:443?encryption=none&security=tls&sni=midodrine.pages.dev&alpn=h3%2Ch2%2Chttp%2F1.1&fp=chrome&allowInsecure=1&type=ws&host=midodrine.pages.dev&path=%2Fus2-full.privateip.net%2Fws#source
+vless://I_Love_%F0%9F%87%B5%F0%9F%87%B8_SSHMax_f48b38e@www.google.com:443?encryption=none&security=tls&sni=midodrine.pages.dev&alpn=h3%2Ch2%2Chttp%2F1.1&fp=chrome&allowInsecure=1&type=ws&host=midodrine.pages.dev&path=%2Fsg.vless.site%2Fvless#four
