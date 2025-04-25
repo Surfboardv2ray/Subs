@@ -1,1 +1,2 @@
-vless://b2bc5eef-366f-4a9f-8da1-81942a46033d@1.1.1.1:443?encryption=none&security=tls&sni=ntls.renal.workers.dev&alpn=h3%2Ch2%2Chttp%2F1.1&fp=chrome&allowInsecure=1&type=ws&host=ntls.renal.workers.dev&path=%2Fde1.vlessvh.site%2Fvless#Traveller
+vless://
+43ef59e8-d170-4777-b121-b5c5271db529@1.1.1.1:443?encryption=none&security=tls&sni=ntls.renal.workers.dev&alpn=h3%2Ch2%2Chttp%2F1.1&fp=chrome&allowInsecure=1&type=ws&host=ntls.renal.workers.dev&path=%2Fde1.vlessvh.site%2Fvless#Traveller
