@@ -15,6 +15,11 @@
 92.114.50.144
 85.133.201.221
 azarandooz.sun.dns-dynamic.net
+// New
+ed.ShomaParvazRoYadetonNist-BypassIsHere.lat
+94.101.185.208
+46.38.148.132
+46.38.148.151
 // Warp
 // 162.159.141.134
 // Cloudflare
