@@ -1,1 +1,2 @@
 vless://aa6bea90-f4a5-4aea-b345-192e62bd172a@bless.network:443?encryption=none&security=tls&sni=pia.mottled.workers.dev&alpn=h3%2Ch2%2Chttp%2F1.1&fp=randomized&type=ws&host=pia.mottled.workers.dev&path=%2F%3Fed%3D2560#Edge%E2%98%98%EF%B8%8F
+wireguard://0Pfs6JqVwnLVw1NZUiTawKcC%2FVRxzW21hBa7tK0d23s%3D@188.114.98.211:1074?publickey=bmXOC%2BF1FxEMF9dyiK2H5%2F1SUtzH0JuVo51h2wPfgyo%3D&reserved=82%2C46%2C239&address=172.16.0.2%2F32%2C2606%3A4700%3A110%3A846c%3Ae510%3Abfa1%3Aea9f%3A5247%2F128&mtu=1280#Wireguard
