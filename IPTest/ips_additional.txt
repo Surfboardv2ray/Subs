@@ -49,3 +49,4 @@
 193.151.132.28
 193.151.158.215
 //
+azarandooz.sun.dns-dynamic.net
