@@ -6,6 +6,7 @@ on:
       - "IPTest/ips.txt"
       - "IPTest/config.txt"
       - "IPTest/extra.txt"
+      - "IPTest/iptest.py"
   workflow_dispatch:
 jobs:
   build:
