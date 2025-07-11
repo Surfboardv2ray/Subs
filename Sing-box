@@ -1,0 +1,449 @@
+{
+    "log": {
+        "level": "warn",
+        "timestamp": true
+    },
+    "dns": {
+        "servers": [
+            {
+                "tag": "dns-remote",
+                "address": "https://94.140.14.14/dns-query",
+                "address_resolver": "dns-direct"
+            },
+            {
+                "tag": "dns-direct",
+                "address": "1.0.0.1",
+                "address_resolver": "dns-local",
+                "detour": "direct"
+            },
+            {
+                "tag": "dns-local",
+                "address": "local",
+                "detour": "direct"
+            },
+            {
+                "tag": "dns-block",
+                "address": "rcode://success"
+            }
+        ],
+        "rules": [
+            {
+                "domain_suffix": [
+                    ".ir"
+                ],
+                "server": "dns-direct"
+            },
+            {
+                "outbound": "direct",
+                "server": "dns-direct"
+            }
+        ],
+        "independent_cache": true
+    },
+    "inbounds": [
+        {
+            "type": "direct",
+            "tag": "dns-in",
+            "listen": "127.0.0.1",
+            "listen_port": 6450,
+            "override_address": "8.8.8.8",
+            "override_port": 53
+        },
+        {
+            "type": "tun",
+            "tag": "tun-in",
+            "mtu": 9000,
+            "inet4_address": "172.19.0.1/28",
+            "auto_route": true,
+            "strict_route": true,
+            "endpoint_independent_nat": true,
+            "stack": "mixed",
+            "sniff": true,
+            "sniff_override_destination": true
+        },
+        {
+            "type": "mixed",
+            "tag": "mixed-in",
+            "listen": "127.0.0.1",
+            "listen_port": 2080,
+            "sniff": true,
+            "sniff_override_destination": true
+        }
+    ],
+    "outbounds": [
+        {
+            "type": "selector",
+            "tag": "proxy",
+            "outbounds": [
+                "Best-Ping",
+                "altho-ghitisim-ortan-oreco-niseth-tsomeoft-hesepfsdad-wcre.pages.dev",
+                "162.159.19.167",
+                "92.243.74.86",
+                "188.114.97.227",
+                "45.80.111.192",
+                "[2606:4700:310c::ac42:2f96]",
+                "[2606:4700:310c::ac42:2c6a]"
+            ]
+        },
+        {
+            "type": "urltest",
+            "tag": "Best-Ping",
+            "outbounds": [
+                "altho-ghitisim-ortan-oreco-niseth-tsomeoft-hesepfsdad-wcre.pages.dev",
+                "162.159.19.167",
+                "92.243.74.86",
+                "188.114.97.227",
+                "45.80.111.192",
+                "[2606:4700:310c::ac42:2f96]",
+                "[2606:4700:310c::ac42:2c6a]"
+            ],
+            "url": "https://www.gstatic.com/generate_204",
+            "interval": "3m",
+            "tolerance": 50
+        },
+        {
+            "type": "direct",
+            "tag": "direct"
+        },
+        {
+            "type": "block",
+            "tag": "block"
+        },
+        {
+            "type": "dns",
+            "tag": "dns-out"
+        },
+        {
+            "type": "vless",
+            "server": "altho-ghitisim-ortan-oreco-niseth-tsomeoft-hesepfsdad-wcre.pages.dev",
+            "server_port": 443,
+            "uuid": "d6c761bd-f13c-4d95-9d5b-6af358079e75",
+            "domain_strategy": "prefer_ipv6",
+            "packet_encoding": "",
+            "tls": {
+                "alpn": [
+                    "http/1.1"
+                ],
+                "enabled": true,
+                "insecure": false,
+                "server_name": "AltHO-GhitIsIM-ORtaN-oRecO-nIsETH-TsOmeoFT-heSePfSdaD-wcRE.PAGEs.DEV",
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "randomized"
+                }
+            },
+            "transport": {
+                "early_data_header_name": "Sec-WebSocket-Protocol",
+                "headers": {
+                    "Host": "altHo-GHiTIsIM-OrTan-oreCO-nIsETH-TsoMEOft-hEsEPFsdAd-WcRE.pAGES.deV"
+                },
+                "max_early_data": 2048,
+                "path": "/aNrnLWR9qJtAjgVx",
+                "type": "ws"
+            },
+            "tag": "altho-ghitisim-ortan-oreco-niseth-tsomeoft-hesepfsdad-wcre.pages.dev"
+        },
+        {
+            "type": "vless",
+            "server": "162.159.19.167",
+            "server_port": 443,
+            "uuid": "d6c761bd-f13c-4d95-9d5b-6af358079e75",
+            "domain_strategy": "prefer_ipv6",
+            "packet_encoding": "",
+            "tls": {
+                "alpn": [
+                    "http/1.1"
+                ],
+                "enabled": true,
+                "insecure": false,
+                "server_name": "AlthO-GhiTiSIm-OrTAN-oReCO-nIsETH-tsOmeoFt-HEsEpFSDad-wCrE.pAgES.dEv",
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "randomized"
+                }
+            },
+            "transport": {
+                "early_data_header_name": "Sec-WebSocket-Protocol",
+                "headers": {
+                    "Host": "ALTHo-GhItIsiM-ORtAn-OReCo-NisETH-TSOMeoFT-HeSePFsdaD-WCRe.pAgeS.DEV"
+                },
+                "max_early_data": 2048,
+                "path": "/LZDJky4AXzekaQPD",
+                "type": "ws"
+            },
+            "tag": "162.159.19.167"
+        },
+        {
+            "type": "vless",
+            "server": "92.243.74.86",
+            "server_port": 443,
+            "uuid": "d6c761bd-f13c-4d95-9d5b-6af358079e75",
+            "domain_strategy": "prefer_ipv6",
+            "packet_encoding": "",
+            "tls": {
+                "alpn": [
+                    "http/1.1"
+                ],
+                "enabled": true,
+                "insecure": false,
+                "server_name": "ALtho-GhitIsIm-ORtan-oreCo-niseTH-TsOMEOFT-HEsepfSdAd-wCRe.pAGEs.dev",
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "randomized"
+                }
+            },
+            "transport": {
+                "early_data_header_name": "Sec-WebSocket-Protocol",
+                "headers": {
+                    "Host": "alThO-ghitIsiM-oRTAn-ORECo-NIseth-TsOMeoft-hesEpFSDAd-WCre.PAGES.DEv"
+                },
+                "max_early_data": 2048,
+                "path": "/tWEgIdaxENYovnsm",
+                "type": "ws"
+            },
+            "tag": "92.243.74.86"
+        },
+        {
+            "type": "vless",
+            "server": "188.114.97.227",
+            "server_port": 443,
+            "uuid": "d6c761bd-f13c-4d95-9d5b-6af358079e75",
+            "domain_strategy": "prefer_ipv6",
+            "packet_encoding": "",
+            "tls": {
+                "alpn": [
+                    "http/1.1"
+                ],
+                "enabled": true,
+                "insecure": false,
+                "server_name": "aLthO-GhitIsiM-ORtAn-oREcO-NiSeTh-TSoMeoFt-HeSePFsDAD-wCRe.pagEs.dEV",
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "randomized"
+                }
+            },
+            "transport": {
+                "early_data_header_name": "Sec-WebSocket-Protocol",
+                "headers": {
+                    "Host": "AlThO-gHitIsiM-oRTaN-orECO-NisETh-tSomEoFT-hESepFSDAD-wCrE.PaGeS.dev"
+                },
+                "max_early_data": 2048,
+                "path": "/fAhSVM6qcY0wesPw",
+                "type": "ws"
+            },
+            "tag": "188.114.97.227"
+        },
+        {
+            "type": "vless",
+            "server": "45.80.111.192",
+            "server_port": 443,
+            "uuid": "d6c761bd-f13c-4d95-9d5b-6af358079e75",
+            "domain_strategy": "prefer_ipv6",
+            "packet_encoding": "",
+            "tls": {
+                "alpn": [
+                    "http/1.1"
+                ],
+                "enabled": true,
+                "insecure": false,
+                "server_name": "aLtho-ghitisiM-oRTan-oReco-nisETH-TsOMEOFT-hESepfSdAd-WCRE.pAGeS.dEv",
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "randomized"
+                }
+            },
+            "transport": {
+                "early_data_header_name": "Sec-WebSocket-Protocol",
+                "headers": {
+                    "Host": "AlTHO-gHITisiM-oRTAN-OrEco-NIseth-tsomeOfT-HESePfsDaD-WCrE.pAGeS.deV"
+                },
+                "max_early_data": 2048,
+                "path": "/8Gqt7gj7YcQzH0ag",
+                "type": "ws"
+            },
+            "tag": "45.80.111.192"
+        },
+        {
+            "type": "vless",
+            "server": "[2606:4700:310c::ac42:2f96]",
+            "server_port": 443,
+            "uuid": "d6c761bd-f13c-4d95-9d5b-6af358079e75",
+            "domain_strategy": "prefer_ipv6",
+            "packet_encoding": "",
+            "tls": {
+                "alpn": [
+                    "http/1.1"
+                ],
+                "enabled": true,
+                "insecure": false,
+                "server_name": "altho-gHiTiSIM-OrTan-oreCO-nISETh-tsOMEOFt-HeSepfsdAD-wCRE.pAGeS.deV",
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "randomized"
+                }
+            },
+            "transport": {
+                "early_data_header_name": "Sec-WebSocket-Protocol",
+                "headers": {
+                    "Host": "ALtho-GhitisIm-orTaN-ORECO-NisetH-TsomeOfT-HesEpFsdAD-Wcre.PAgeS.DeV"
+                },
+                "max_early_data": 2048,
+                "path": "/1Xk82ngggmbMwCdW",
+                "type": "ws"
+            },
+            "tag": "[2606:4700:310c::ac42:2f96]"
+        },
+        {
+            "type": "vless",
+            "server": "[2606:4700:310c::ac42:2c6a]",
+            "server_port": 443,
+            "uuid": "d6c761bd-f13c-4d95-9d5b-6af358079e75",
+            "domain_strategy": "prefer_ipv6",
+            "packet_encoding": "",
+            "tls": {
+                "alpn": [
+                    "http/1.1"
+                ],
+                "enabled": true,
+                "insecure": false,
+                "server_name": "AlTHo-ghiTIsiM-OrtAN-OREco-nIsetH-tSoMEoFt-heSepFSdad-WCrE.PaGEs.DeV",
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "randomized"
+                }
+            },
+            "transport": {
+                "early_data_header_name": "Sec-WebSocket-Protocol",
+                "headers": {
+                    "Host": "alTHo-GhItiSiM-oRTAn-oRecO-nIseTh-tSomeoFT-HesEPfSDAD-wcrE.pAGeS.Dev"
+                },
+                "max_early_data": 2048,
+                "path": "/tlyH17W8lWRFSCiL",
+                "type": "ws"
+            },
+            "tag": "[2606:4700:310c::ac42:2c6a]"
+        }
+    ],
+    "route": {
+        "rules": [
+            {
+                "port": 53,
+                "outbound": "dns-out"
+            },
+            {
+                "inbound": "dns-in",
+                "outbound": "dns-out"
+            },
+            {
+                "network": "udp",
+                "port": 443,
+                "port_range": [],
+                "outbound": "block"
+            },
+            {
+                "ip_is_private": true,
+                "outbound": "direct"
+            },
+            {
+                "rule_set": [
+                    "geosite-category-ads-all",
+                    "geosite-malware",
+                    "geosite-phishing",
+                    "geosite-cryptominers",
+                    "geoip-malware",
+                    "geoip-phishing"
+                ],
+                "outbound": "block"
+            },
+            {
+                "rule_set": [
+                    "geosite-ir",
+                    "geoip-ir"
+                ],
+                "outbound": "direct"
+            },
+            {
+                "ip_cidr": [
+                    "224.0.0.0/3",
+                    "ff00::/8"
+                ],
+                "source_ip_cidr": [
+                    "224.0.0.0/3",
+                    "ff00::/8"
+                ],
+                "outbound": "block"
+            }
+        ],
+        "rule_set": [
+            {
+                "type": "remote",
+                "tag": "geosite-ir",
+                "format": "binary",
+                "url": "https://raw.githubusercontent.com/Chocolate4U/Iran-sing-box-rules/rule-set/geosite-ir.srs",
+                "download_detour": "direct"
+            },
+            {
+                "type": "remote",
+                "tag": "geosite-category-ads-all",
+                "format": "binary",
+                "url": "https://raw.githubusercontent.com/Chocolate4U/Iran-sing-box-rules/rule-set/geosite-category-ads-all.srs",
+                "download_detour": "direct"
+            },
+            {
+                "type": "remote",
+                "tag": "geosite-malware",
+                "format": "binary",
+                "url": "https://raw.githubusercontent.com/Chocolate4U/Iran-sing-box-rules/rule-set/geosite-malware.srs",
+                "download_detour": "direct"
+            },
+            {
+                "type": "remote",
+                "tag": "geosite-phishing",
+                "format": "binary",
+                "url": "https://raw.githubusercontent.com/Chocolate4U/Iran-sing-box-rules/rule-set/geosite-phishing.srs",
+                "download_detour": "direct"
+            },
+            {
+                "type": "remote",
+                "tag": "geosite-cryptominers",
+                "format": "binary",
+                "url": "https://raw.githubusercontent.com/Chocolate4U/Iran-sing-box-rules/rule-set/geosite-cryptominers.srs",
+                "download_detour": "direct"
+            },
+            {
+                "type": "remote",
+                "tag": "geoip-ir",
+                "format": "binary",
+                "url": "https://raw.githubusercontent.com/Chocolate4U/Iran-sing-box-rules/rule-set/geoip-ir.srs",
+                "download_detour": "direct"
+            },
+            {
+                "type": "remote",
+                "tag": "geoip-malware",
+                "format": "binary",
+                "url": "https://raw.githubusercontent.com/Chocolate4U/Iran-sing-box-rules/rule-set/geoip-malware.srs",
+                "download_detour": "direct"
+            },
+            {
+                "type": "remote",
+                "tag": "geoip-phishing",
+                "format": "binary",
+                "url": "https://raw.githubusercontent.com/Chocolate4U/Iran-sing-box-rules/rule-set/geoip-phishing.srs",
+                "download_detour": "direct"
+            }
+        ],
+        "auto_detect_interface": true,
+        "override_android_vpn": true,
+        "final": "proxy"
+    },
+    "experimental": {
+        "clash_api": {
+            "external_controller": "0.0.0.0:9090",
+            "external_ui": "yacd",
+            "external_ui_download_url": "https://github.com/MetaCubeX/Yacd-meta/archive/gh-pages.zip",
+            "external_ui_download_detour": "direct",
+            "secret": "",
+            "default_mode": "rule"
+        }
+    }
+}
