@@ -1,0 +1,59 @@
+name: IPTest
+on:
+  push:
+    paths:
+      - ".github/workflows/iptest.yml"
+      - "IPTest/ips.txt"
+      - "IPTest/config.txt"
+      - "IPTest/extra.txt"
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.x'
+      
+    - name: Install dependencies
+      run: |
+          python -m pip install --upgrade pip
+
+    - name: Run script to create new configs
+      run: |
+          python IPTest/iptest.py
+          
+    - name: Check for new changes
+      id: changes
+      run: |
+            git diff --quiet && echo 'No changes' || echo '::set-output name=changed::true'   
+    - name: Commit and Push Changes
+      if: steps.changes.outputs.changed == 'true'   
+      run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add IPTest/output
+          timestamp=$(TZ='Asia/Tehran' date)
+          git commit -m "✅Updated on ${timestamp}"
+          git push
+
+    - name: Convert output to base64
+      run: |
+          content=$(cat IPTest/output | base64 | tr -d '\n')
+            echo "$content" > IPTest/output64
+            
+    - name: Check for output Base64 Changes
+      id: changesS
+      run: |
+            git diff --quiet && echo 'No changes' || echo '::set-output name=changed::true'   
+    - name: Commit and Push Renamed Base64
+      if: steps.changesS.outputs.changed == 'true'   
+      run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add IPTest/output64
+          timestamp=$(TZ='Asia/Tehran' date)
+          git commit -m "✅Updated on ${timestamp}"
+          git push
