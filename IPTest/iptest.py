@@ -8,7 +8,7 @@ proxy_counter = 0
 CUSTOM_TEXT = "AzarAndoozVPNbot"
 
 def make_remark(ip):
-    return f"{ip}+@{CUSTOM_TEXT}"
+    return f"{ip}@{CUSTOM_TEXT}"
 
 def rename_vmess_address(proxy, new_address):
     global proxy_counter
